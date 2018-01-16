@@ -1,5 +1,4 @@
-﻿using GATools;
-using System;
+﻿using System;
 
 namespace UDPCasts.DllConsole
 {
