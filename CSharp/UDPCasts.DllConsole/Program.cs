@@ -16,10 +16,8 @@ namespace UDPCasts.DllConsole
 #if DEBUG
             generator.Generate();
 #else
-            generator.Generate();
+            generator.Generate(true);
 #endif
-
-
 
             Console.WriteLine("Press <any> key to terminate...");
             Console.ReadKey(true);
