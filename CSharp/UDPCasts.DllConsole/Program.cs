@@ -13,7 +13,11 @@ namespace UDPCasts.DllConsole
                 "UDPCasts"
             });
 
+#if DEBUG
             generator.Generate();
+#else
+            generator.Generate(true);
+#endif
 
             Console.WriteLine("Press <any> key to terminate...");
             Console.ReadKey(true);
