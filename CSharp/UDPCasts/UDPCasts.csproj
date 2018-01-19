@@ -37,6 +37,8 @@
     <Compile Include="ByteFactory.cs" />
     <Compile Include="BytesUDPClient.cs" />
     <Compile Include="BytesUDPServer.cs" />
+    <Compile Include="PoseCast.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="GenericUDPClient.cs" />
     <Compile Include="GenericUDPServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

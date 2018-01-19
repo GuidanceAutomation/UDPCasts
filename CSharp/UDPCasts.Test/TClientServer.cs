@@ -1,10 +1,7 @@
-﻿using NUnit.Framework;
-
-/// TClientServer.cs Copyright Guidance Automation Ltd
-
-using System;
+﻿using System;
 using System.Net;
 using System.Threading;
+using NUnit.Framework;
 
 namespace UDPCasts.Test
 {
