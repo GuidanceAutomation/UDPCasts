@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Net;
 using System.Threading;
-using NUnit.Framework;
 
 namespace UDPCasts.Test
 {

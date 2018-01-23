@@ -36,7 +36,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TClientServer.cs" />
-    <Compile Include="TPoseCast.cs" />
+    <Compile Include="TPoseIPCast.cs" />
+    <Compile Include="TPoseIPStruct.cs" />
     <Compile Include="TUDPClient.cs" />
   </ItemGroup>
   <ItemGroup>

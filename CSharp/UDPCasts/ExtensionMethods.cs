@@ -5,6 +5,14 @@ namespace UDPCasts
     public static class ExtensionMethods
     {
         /// <summary>
+        /// Converts degrees to radians
+        /// </summary>
+        public static double DegToRad(this double value)
+        {
+            return (value * Math.PI) / 180.0d;
+        }
+
+        /// <summary>
         /// Wraps into range [-PI, PI]
         /// </summary>
         public static double PiWrap(this double angleRad)
@@ -20,14 +28,6 @@ namespace UDPCasts
                 angleRad += 2.0d * Math.PI;
             }
             return angleRad;
-        }
-
-        /// <summary>
-        /// Converts degrees to radians
-        /// </summary>
-        public static double DegToRad(this double value)
-        {
-            return (value * Math.PI) / 180.0d;
         }
 
         /// <summary>

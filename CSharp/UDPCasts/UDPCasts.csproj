@@ -37,10 +37,12 @@
     <Compile Include="ByteFactory.cs" />
     <Compile Include="BytesUDPClient.cs" />
     <Compile Include="BytesUDPServer.cs" />
-    <Compile Include="PoseCast.cs" />
+    <Compile Include="FleetCast.cs" />
+    <Compile Include="PoseIPCast.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="GenericUDPClient.cs" />
     <Compile Include="GenericUDPServer.cs" />
+    <Compile Include="PoseIPStruct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

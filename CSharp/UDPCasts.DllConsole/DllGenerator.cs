@@ -17,6 +17,21 @@ namespace UDPCasts.DllConsole
         {
         }
 
+        public IEnumerable<string> Projects { get { return projects.ToList(); } }
+
+        public void AddProject(string project)
+        {
+            AddProjects(new string[] { project });
+        }
+
+        public void AddProjects(IEnumerable<string> projects)
+        {
+            lock (lockObject)
+            {
+                this.projects.AddRange(ValidateStrings(projects));
+            }
+        }
+
         public void Generate(bool isRelease = false, string outputDir = null, string sourceDir = null)
         {
             if (!isRelease)
@@ -90,14 +105,6 @@ namespace UDPCasts.DllConsole
             }
         }
 
-        public void AddProjects(IEnumerable<string> projects)
-        {
-            lock (lockObject)
-            {
-                this.projects.AddRange(ValidateStrings(projects));
-            }
-        }
-
         private string ValidateString(string project)
         {
             return project = project + ".dll";
@@ -114,12 +121,5 @@ namespace UDPCasts.DllConsole
 
             return validated;
         }
-
-        public void AddProject(string project)
-        {
-            AddProjects(new string[] { project });
-        }
-
-        public IEnumerable<string> Projects { get { return projects.ToList(); } }
     }
 }
