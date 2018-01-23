@@ -5,7 +5,7 @@ using System.Net;
 namespace UDPCasts.Test
 {
     [TestFixture]
-    [Category("PoseCast")]
+    [Category("PoseIPStruct")]
     public class TPoseIPStruct
     {
         private double tol = 1e-6;

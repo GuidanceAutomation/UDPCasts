@@ -9,11 +9,11 @@ namespace UDPCasts
     /// with a pose (position and orientation).
     /// </summary>
     [Serializable]
-    public class PoseIPCast : ByteArrayCast
+    public class FleetPoseIPCast : ByteArrayCast
     {
         private List<PoseIPStruct> dataSet = new List<PoseIPStruct>();
 
-        public PoseIPCast(byte tick, byte[][] byteArray)
+        public FleetPoseIPCast(byte tick, byte[][] byteArray)
             : base(tick, byteArray)
         {
             foreach (byte[] bytes in byteArray)

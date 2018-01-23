@@ -6,8 +6,8 @@ using System.Net;
 namespace UDPCasts.Test
 {
     [TestFixture]
-    [Category("PoseCast")]
-    public class TPoseIPCast
+    [Category("FleetPoseIPCast")]
+    public class TFleetPoseIPCast
     {
         private PoseIPStruct alpha;
         private PoseIPStruct beta;
@@ -17,7 +17,7 @@ namespace UDPCasts.Test
         [TestCase(255)]
         public void Init(byte tick)
         {
-            PoseIPCast cast = new PoseIPCast(tick, testData);
+            FleetPoseIPCast cast = new FleetPoseIPCast(tick, testData);
 
             Assert.AreEqual(tick, cast.Tick);
             CollectionAssert.IsNotEmpty(cast.DataSet);

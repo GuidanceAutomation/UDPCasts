@@ -38,7 +38,7 @@
     <Compile Include="BytesUDPClient.cs" />
     <Compile Include="BytesUDPServer.cs" />
     <Compile Include="FleetCast.cs" />
-    <Compile Include="PoseIPCast.cs" />
+    <Compile Include="FleetPoseIPCast.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="GenericUDPClient.cs" />
     <Compile Include="GenericUDPServer.cs" />
