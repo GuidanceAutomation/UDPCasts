@@ -1,9 +1,28 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UDPCasts
 {
     public static class ExtensionMethods
     {
+        public static byte[][] ToByteArray(this IEnumerable<PoseIPStruct> dataSet)
+        {
+            int numRows = dataSet.Count();
+            byte[][] bytes = new byte[numRows][];
+
+            int nextIndex = 0;
+
+            foreach(PoseIPStruct poseIP in dataSet)
+            {
+                bytes[nextIndex] = poseIP.Bytes;
+                nextIndex++;
+            }
+
+            return bytes;
+        }
+
         /// <summary>
         /// Converts degrees to radians
         /// </summary>

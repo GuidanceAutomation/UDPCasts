@@ -4,6 +4,7 @@ using System.Net;
 
 namespace UDPCasts
 {
+    [Serializable]
     /// <summary>
     /// Represents the a pose (position and orientation) of an object uniquely identified
     /// by an IP v4 address.

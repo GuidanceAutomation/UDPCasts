@@ -34,8 +34,10 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClientServerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TClientServer.cs" />
+    <Compile Include="TClientServerFleetPoseIPCast.cs" />
     <Compile Include="TFleetPoseIPCast.cs" />
     <Compile Include="TPoseIPStruct.cs" />
     <Compile Include="TUDPClient.cs" />

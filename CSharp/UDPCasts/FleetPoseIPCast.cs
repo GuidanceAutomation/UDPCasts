@@ -13,6 +13,11 @@ namespace UDPCasts
     {
         private List<PoseIPStruct> dataSet = new List<PoseIPStruct>();
 
+        public FleetPoseIPCast(byte tick, IEnumerable<PoseIPStruct> dataSet)
+            :this(tick, dataSet.ToByteArray())
+        {       
+        }
+
         public FleetPoseIPCast(byte tick, byte[][] byteArray)
             : base(tick, byteArray)
         {
