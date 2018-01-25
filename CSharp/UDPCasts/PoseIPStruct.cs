@@ -100,5 +100,30 @@ namespace UDPCasts
                 return (ymm == int.MinValue) ? double.NaN : ((double)ymm) / 100.0;
             }
         }
+
+        public string ToPoseString()
+        {
+            return string.Format("X: {0}, Y: {1}, Heading: {2} (rad)", X, Y, Heading);
+        }
+
+        public string ToPoseDegString()
+        {
+            return string.Format("X: {0}, Y: {1}, Heading: {2} (deg)", X, Y, Heading.DegToRad());
+        }
+
+        public string ToPoseIPStringDeg()
+        {
+            return string.Format("{0}, IPV4: {1}", ToPoseDegString(), IPAddress);
+        }
+
+        public string ToPoseIPString()
+        {
+            return string.Format("{0}, IPV4: {1}", ToPoseString(), IPAddress);
+        }
+
+        public override string ToString()
+        {
+            return ToPoseIPString();
+        }
     }
 }
