@@ -103,12 +103,12 @@ namespace UDPCasts
 
         public string ToPoseString()
         {
-            return string.Format("X: {0}, Y: {1}, Heading: {2} (rad)", X, Y, Heading);
+            return string.Format("X: {0:n3}, Y: {1:n3}, Heading: {2:n2} (rad)", X, Y, Heading);
         }
 
         public string ToPoseDegString()
         {
-            return string.Format("X: {0}, Y: {1}, Heading: {2} (deg)", X, Y, Heading.DegToRad());
+            return string.Format("X: {0:n3}, Y: {1:n3}, Heading: {2:n2} (deg)", X, Y, Heading.RadToDeg());
         }
 
         public string ToPoseIPStringDeg()
