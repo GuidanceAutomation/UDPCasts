@@ -41,11 +41,11 @@ namespace UDPCasts
             BitConverter.GetBytes((Int32)(x * 100)).CopyTo(bytes, 4);
             BitConverter.GetBytes((Int32)(y * 100)).CopyTo(bytes, 8);
 
-            // Store heading in deg
+            // Store heading in centideg
             double wrapped = headingRad.PiWrap();
             double headingDeg = wrapped.RadToDeg();
 
-            short shortValue = (short)(headingDeg * 100);
+            short shortValue = (short)(headingDeg * 10);
             BitConverter.GetBytes(shortValue).CopyTo(bytes, 12);
         }
 
@@ -64,7 +64,7 @@ namespace UDPCasts
                     return double.NaN;
                 }
 
-                double scaledBack = ((double)headingDeg) / 100.0;
+                double scaledBack = ((double)headingDeg) / 10.0;
                 return scaledBack.DegToRad();
             }
         }
